@@ -31,7 +31,6 @@ const Home = () => {
                 autoStart: true,
                 loop: true,
               }}
-              
               />
             </span>
           </div>

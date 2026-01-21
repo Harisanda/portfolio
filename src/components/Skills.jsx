@@ -1,6 +1,7 @@
 import React from 'react'
 import './style/Skills.css'
 import { skills } from '../utils/skills'
+import { easeIn, easeOut, motion } from 'framer-motion'
 
 const Skills = () => {
   return (
@@ -10,16 +11,21 @@ const Skills = () => {
           <div className='trait'></div>
         </div>
         <div className='skills-content'>
-        {
-            skills.map(skill => {
-            return (
-                <div className='skills'>
-                <img src={skill.image} alt={skill.nom} />
-                <p>{skill.nom}</p>
-                </div>
-            )
-            })
-        }
+          {
+              skills.map(skill => {
+              return (
+                  <motion.div className='skills'
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1}}
+                    viewport={{once: false}}
+                    transition={{duration: 2,ease: easeIn }}
+                  >
+                    <img src={skill.image} alt={skill.nom} />
+                    <p>{skill.nom}</p>
+                  </motion.div>
+              )
+              })
+          }
         </div>
     </section>
   )
