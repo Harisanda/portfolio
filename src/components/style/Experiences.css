@@ -28,7 +28,9 @@
     /* width: 700px; */
     border-radius: 8px;
     padding: 10px;
-    box-shadow: 0px 0px 1px 1px  rgba(95, 100, 107, 0.3);
+    box-shadow: 0px 0px 5px 1px  #001D3D;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-xp-title h2 {
@@ -49,18 +51,25 @@
     letter-spacing: .3px;
     hyphens: auto;
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: #353535;
 }
 
 .stack-list {
     display: flex;
     align-items: center;
     gap: 10px;
+    height: 35px;
+    margin-top: auto;
 }
 
 .stack-list p {
-    border: solid 1px #FFC300;
+    border: solid 1px #001D3D;
     border-radius: 8px;
     padding: 5px;
+    color: #353535;
 }
 
 .formation {
@@ -78,8 +87,7 @@
 .f-container {
     width: 50%;
     position: relative;
-    animation: movedown 3s linear forwards;
-    opacity: 0;
+    opacity: 1;
 }
 
 i {
@@ -104,12 +112,12 @@ i {
 }
 
 .text-box {
-    padding: 20px 20px;
+    padding: 10px 20px;
     margin: 0 30px;
-    background-color: #fff;
+    background-color: #353535;
     border-radius: 6px;
     font-size: 15px;
-    color: #000814;
+    color: #fff;
     position: relative;
 }
 
@@ -127,12 +135,11 @@ i {
     position: absolute;
     width: 6px;
     height: 100%;
-    background: #fff;
+    background: #353535;
     top: 0;
     left: 50%;
     margin-left: -7px;
     z-index: -1;
-    animation: moveline 6s linear forwards;
 }
 
 .arrow-left {
@@ -142,7 +149,7 @@ i {
     top: 28px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #fff;
+    border-left: 15px solid #353535;
     right: -15px;
     z-index: 1;
 }
@@ -154,63 +161,19 @@ i {
     top: 28px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #fff;
-    left: -15px;
+    border-right: 15px solid #353535;
+    left: -14px;
     z-index: 1;
 }
 
-/* animation */
-.f-container:nth-child(1) {
-    animation-delay: 1s;
-}
-
-.f-container:nth-child(2) {
-    animation-delay: 2s;
-    
-}
-
-.f-container:nth-child(3) {
-    animation-delay: 3s;
-    
-}
-
-.f-container:nth-child(4) {
-    animation-delay: 4s;
-    
-}
-
-@keyframes moveline {
-    0% {
-        height: 0;
-    }
-    100% {
-        height: 100%;
-    }
-}
-
-@keyframes movedown {
-    0% {
-        opacity: 1;
-        transform: translateY(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-
 @media screen and (max-width: 700px) {
-    .timeline {
-        /* margin: 0 auto; */
-    }
+
     .timeline::after {
         left: 0;
     }
 
     .f-container {
         width: 100%;
-        /* inset: 0; */
         margin: 10px 0;
     }
 

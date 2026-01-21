@@ -3,6 +3,7 @@ import './style/Services.css'
 import { FaLaptopCode } from "react-icons/fa";
 import { TbDeviceMobileCode } from "react-icons/tb";
 import { TbSettingsCode } from "react-icons/tb";
+import { motion } from 'framer-motion';
 
 
 
@@ -11,7 +12,12 @@ export const Services = () => {
     <section className='services' id='services'>
         <h2>Services</h2>
         <div className="services-content">
-            <div className='card-services'>
+            <motion.div className='card-services'
+                initial={{opacity:0,y:-100}} 
+                whileInView={{opacity:1, y:0}} 
+                transition={{duration: 2, ease: 'easeOut'}} 
+                viewport={{once: false, amount: 0.3}}
+            >
                 <div className='icon'>
                     <FaLaptopCode />
                 </div>
@@ -19,8 +25,13 @@ export const Services = () => {
                 <p>
                     Je conçois des interfaces web modernes, responsives et intuitives,en respectant les bonnes pratiques du développement frontend.
                 </p>
-            </div>
-            <div className='card-services'>
+            </motion.div>
+            <motion.div className='card-services'
+                initial={{opacity:0,y:100}} 
+                whileInView={{opacity:1, y:0}} 
+                transition={{duration: 2, ease: 'easeOut'}} 
+                viewport={{once: false, amount: 0.3}}
+            >
                 <div className='icon'>
                     <TbDeviceMobileCode />
                 </div>
@@ -28,8 +39,13 @@ export const Services = () => {
                 <p>
                     Je développe des applications mobiles simples, performantes et ergonomiques,adaptées aux besoins des utilisateurs et compatibles Android et iOS.
                 </p>
-            </div>
-            <div className='card-services'>
+            </motion.div>
+            <motion.div className='card-services'
+                initial={{opacity:0,y:-100}} 
+                whileInView={{opacity:1, y:0}} 
+                transition={{duration: 2, ease: 'easeOut'}} 
+                viewport={{once: false, amount: 0.3}}
+            >
                 <div className='icon'>
                     <TbSettingsCode />
                 </div>
@@ -37,7 +53,7 @@ export const Services = () => {
                 <p>
                     Je conçois des APIs robustes et bien structurées,permettant la gestion des données, des utilisateurs et de la logique métier.
                 </p>
-            </div>
+            </motion.div>
         </div>
     </section>
   )

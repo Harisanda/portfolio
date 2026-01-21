@@ -3,9 +3,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 import { IoIosSend } from "react-icons/io";
-import './style/Contacts.css'
-import Footer from './Footer';
-import { div } from 'framer-motion/client';
+import './style/Contacts.css';
+import { motion } from 'framer-motion';
 
 function Contacts() {
   return (
@@ -13,7 +12,18 @@ function Contacts() {
         <h2>CONTACTEZ - MOI</h2>
           {/* <div className='trait'></div> */}
         <div className="contact-content">
-          <div className='form-contact'>
+          <motion.div className='form-contact'
+                      initial={{opacity:0, x:-100}}
+                      whileInView={{opacity:1, x:0}}
+                      transition={{
+                        duration: 1, 
+                        ease: "easeInOut",
+                        type:"spring",
+                        stiffness: 500,
+                        damping: 10
+                      }}
+                      viewport={{once: false, amount:0.3}}
+          >
               <form>
                   <div class="input-box">
                     <label class="name" for="name">Nom</label>
@@ -34,8 +44,19 @@ function Contacts() {
                     </button>
                   </div>
               </form>
-          </div>
-          <div className="address">
+          </motion.div>
+          <motion.div className="address"
+                      initial={{opacity:0, x:100}}
+                      whileInView={{opacity:1, x:0}}
+                      transition={{
+                        duration: 1, 
+                        ease: "easeInOut",
+                        type:"spring",
+                        stiffness: 500,
+                        damping: 10
+                      }}
+                      viewport={{once: false, amount:0.3}}
+          >
               <h3>Mes coordonnes</h3>
               <div className='address-list'>
                 <div className='contact-list'>
@@ -51,7 +72,7 @@ function Contacts() {
                   <p>Ankatso,Antananarivo Madagascar</p>
                 </div>
               </div>
-          </div>
+          </motion.div>
         </div>
     </section>
   )
