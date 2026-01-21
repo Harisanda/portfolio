@@ -1,0 +1,49 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: green; */
+  margin: 10em 3.4em 5em 3.4em;
+}
+
+.home-content{
+  font-size: 1.2em;
+  /* background: red; */
+  width: 60%;
+}
+
+.profil img {
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  object-fit: cover;
+  border: solid,2px, #FFC300;
+  box-shadow: 0px 0px 5px 1px rgba(255,195,0,0.58);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(255,195,0,0.58);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(255,195,0,0.58);
+}
+
+.btn-down {
+  /* background: green; */
+  width: 100%;
+  margin-top: 5em;
+}
+
+.button {
+  background: #FFC300;
+  border: solid, 1px, #001D3D;
+  height: 50px;
+  font-size: 1em;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  gap: 1em;
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 200;
+  font-size: 1em;
+}

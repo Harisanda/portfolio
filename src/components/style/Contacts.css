@@ -1,0 +1,143 @@
+.contacts {
+  background: #000B1E;
+  /* height: 700px; */
+  margin: 5rem 0 0 0;
+}
+
+.contacts h2 {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  margin: 0 3.4rem;
+  height: 400px;
+  gap: 20px;
+}
+  
+.form-contact {
+  background: transparent;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid, 1px, #fff; */
+  height: 100%;
+}
+
+form {
+  /* background: beige; */
+  width: 60%;
+  /* margin: 0 40px; */
+}
+
+label {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  /* background: red; */
+}
+
+.input-box {
+  margin:20px auto;
+  /* background: black; */
+  /* width: 300px; */
+  
+}
+  
+.input-btn button {
+  width: 100%;
+  border: none;
+} 
+
+
+.btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-submit :last-child{
+  font-size: 1.3rem;
+}
+  
+.input-box .field {
+  width: 100%;
+  height: 30px;
+  font-size: 1.2rem;
+  padding-left: 5px;
+  outline: none;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  margin-top: 10px;
+  background: #e5e5e5;
+  color: #000;
+}
+
+.input-box .field::placeholder {
+  padding-left: 5px;
+  color: #000;
+  font-size: .9rem;
+}
+
+.input-box .area{
+  height: 100px;
+  resize: none;
+}
+
+
+.address {
+  width: 50%;
+  /* background: orange; */
+  /* border: solid, 1px, #fff; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.address-list {
+  /* background: red; */
+  /* margin: 0 40px; */
+  width: 45%;
+  border: solid, 1px, #FFC300;
+  padding: 0 30px;
+}
+
+.address h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.contact-list{
+  /* width: 100%; */
+  /* background: #000814;s */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+  margin: 10px 20px;
+}
+
+.contact-list :first-child{
+  color: #FFC300;
+  font-size: 1.7rem;
+}
+
+.contact-list p{
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+
