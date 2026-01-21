@@ -12,6 +12,24 @@
   width: 60%;
 }
 
+.home-content h1 , .home-content h3{
+  margin: 0;
+}
+
+.type-writer {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+}
+
+
+.Typewriter__wrapper , .Typewriter__cursor{
+  color: #ffffff;
+  font-size: 1em;
+}
+
 .profil img {
   width: 30em;
   height: 30em;
@@ -26,24 +44,33 @@
 .btn-down {
   /* background: green; */
   width: 100%;
-  margin-top: 5em;
+  margin-top: 3em;
 }
 
 .button {
-  background: #FFC300;
+  background: #001D3D;
   border: solid, 1px, #001D3D;
+  border-radius: 10px;
   height: 50px;
   font-size: 1em;
-  color: #000;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 25%;
   gap: 1em;
   font-weight: 500;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover{
+  transform: scale(.98);
+  color:  #fff;
+  background: #000B1E;
 }
 
 h3 {
   font-weight: 200;
-  font-size: 1em;
+  font-size: .9em;
 }
