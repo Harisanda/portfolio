@@ -29,6 +29,12 @@
   font-style: normal;
 }
 
+*{
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+
+}
+
 
 body {
   margin: 0;
@@ -36,6 +42,8 @@ body {
   font-family: 'open_sans', sans-serif, Arial, Helvetica;
   background-color: #000814;
   color: #fff;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .slick-slide > div {

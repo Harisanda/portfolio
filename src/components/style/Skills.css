@@ -53,3 +53,18 @@
   color: #fff;
   font-weight: 700;
 }
+
+@media screen and (max-width: 1140px) {
+  .trait {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .trait {
+    display: none;
+  }
+  .skills-title  {
+    justify-content: center;
+  }
+}

@@ -13,7 +13,21 @@ const Projects = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        pauseOnHover: true 
+        pauseOnHover: true,
+        responsive : [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     };
 
   return (

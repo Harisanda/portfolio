@@ -24,26 +24,26 @@ function Contacts() {
                       }}
                       viewport={{once: false, amount:0.3}}
           >
-              <form>
-                  <div class="input-box">
-                    <label class="name" for="name">Nom</label>
-                    <input class="field" id="name" name="name"placeholder='Votre nom' required />
-                  </div>
-                  <div class="input-box">
-                    <label class="email" for="email">Email</label>
-                    <input class="field" id="email" name="email" placeholder='Votre email' required />
-                  </div>
-                  <div class="input-box">
-                    <label class="message" for="message">Message</label>
-                    <textarea class="field area" id="message" name="message" placeholder='Ici votre message' required></textarea>
-                  </div>
-                  <div class="input-btn">
-                    <button class="btn-submit" type="submit">
-                      <p>Envoyer</p>
-                      <IoIosSend />
-                    </button>
-                  </div>
-              </form>
+            <form>
+                <div class="input-box">
+                  <label class="name" for="name">Nom</label>
+                  <input class="field" id="name" name="name"placeholder='Votre nom' required />
+                </div>
+                <div class="input-box">
+                  <label class="email" for="email">Email</label>
+                  <input class="field" id="email" name="email" placeholder='Votre email' required />
+                </div>
+                <div class="input-box">
+                  <label class="message" for="message">Message</label>
+                  <textarea class="field area" id="message" name="message" placeholder='Ici votre message' required></textarea>
+                </div>
+                <div class="input-btn">
+                  <button class="btn-submit" type="submit">
+                    <p>Envoyer</p>
+                    <IoIosSend />
+                  </button>
+                </div>
+            </form>
           </motion.div>
           <motion.div className="address"
                       initial={{opacity:0, x:100}}

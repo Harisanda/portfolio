@@ -58,7 +58,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25%;
+  width: 35%;
   gap: 1em;
   font-weight: 500;
   transition: .2s ease-in-out;
@@ -74,4 +74,100 @@
 h3 {
   font-weight: 200;
   font-size: .9em;
+}
+
+
+@media screen and (max-width: 1330px) and (min-width: 1050px) {
+  .button {
+    width: 45%;
+  }
+
+  .profil img {
+    width: 25em;
+    height: 25em;
+  }
+
+  .home-content h3 {
+    font-size: .8em;
+  }
+
+  .type-writer {
+    font-size: .8em;
+  }
+
+  .Typewriter__wrapper , .Typewriter__cursor{
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+ .home {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+    margin: 10;
+  }
+ 
+  .home-content {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+
+  .home-content h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .type-writer {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .home-content h3 {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .btn-down {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  .profil {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .button {
+    width: 60%;
+  }
+
+  .button p {
+    font-size: 1rem;
+  }
+  
+  .type-writer{
+    font-size: .6em;
+  }
+
+  .profil img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .home {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 50px;
+  }
 }
