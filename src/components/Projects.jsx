@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import Slider from "react-slick";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './style/Projects.css'
 import { data } from '../utils/data';
