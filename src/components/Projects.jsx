@@ -16,17 +16,17 @@ const Projects = () => {
         pauseOnHover: true,
         responsive : [
             {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 2
                 }
             },
-            {
-                breakpoint: 700,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
         ]
     };
 
