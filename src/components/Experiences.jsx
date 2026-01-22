@@ -146,7 +146,7 @@ export const Experiences = () => {
                                     variants={timelineVariants}
                                     initial="hidden"
                                     whileInView="visible"
-                                    viewport={{once:false, amount:0.3}}
+                                    viewport={{once:false}}
                             >
                                 <i><Icon/></i> 
                                 <div className='text-box'>

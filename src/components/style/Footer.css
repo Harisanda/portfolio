@@ -3,3 +3,9 @@
     margin: 10px 0;
     padding: 0;
 }
+
+@media screen and (max-width: 400px) {
+    .footer {
+        font-size: .8rem; 
+    }   
+}

@@ -16,7 +16,7 @@
   align-items: center;
   padding-bottom: 40px;
   margin: 0 3.4rem;
-  height: 400px;
+  /* height: 400px; */
   gap: 20px;
 }
   
@@ -107,7 +107,7 @@ label {
 .address-list {
   /* background: red; */
   /* margin: 0 40px; */
-  width: 45%;
+  width: 60%;
   border: solid, 1px, #FFC300;
   padding: 0 30px;
 }
@@ -125,7 +125,7 @@ label {
   /* justify-content: center; */
   align-items: center;
   gap: 10px;
-  margin: 10px 20px;
+  margin: 10px 0;
 }
 
 .contact-list :first-child{
@@ -139,5 +139,50 @@ label {
   font-weight: 500;
 }
 
+@media screen and (max-width: 1410px) {
+  .contact-list{
+    width: 100%;
+  }
+  .address-list {
+    width: 100%;
+  }
+}
 
+@media screen and (max-width: 900px) {
+  .contact-content{
+    flex-direction: column;
+  }  
+
+  .address {
+    width: 90%;
+  }
+
+  .contact-list {
+    /* background: green; */
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-list p {
+    font-size: .8rem;
+  }
+
+  .contact-list :first-child {
+    font-size: .8rem;
+  }
+  
+  form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .address h3 {
+    font-size: 1.2rem;
+  }
+  .address-list {
+    border: none;
+    width: 100%;
+  }
+}
 

@@ -11,23 +11,27 @@ header{
 }
  
 nav {
-  width: 95%;
+  width: 100%;
+  margin: 0 3.4em;
+  /* background: green; */
   height: 5em;
   display: flex;
   justify-content:space-between;
+  /* justify-content: center; */
   align-items: center;
   font-weight: 700;
   padding-left: 0;
 }
 
 nav .menu {
-  width: 70%;
+  width: 100%;
   border-bottom: solid 1px #001D3D;
 }
 
 .menu ul {
   display: flex;
   justify-content: space-around;
+  gap: 2rem;
   align-items: center;
   padding: 0;
   cursor: pointer; 
@@ -66,6 +70,7 @@ nav .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   font-size: 1.5em;
   cursor: pointer;
   padding: 0;
@@ -90,11 +95,47 @@ nav .menu {
 }
 
 .logo img{
-  width: 150px;
-  height: 70px;
+  width: 100px;
+  height: 60px;
 }
 
 span {
   color: #FFC300;
   font-size: 1.5em;
+}
+
+@media screen and (max-width: 950px){
+  .logo {
+    display: none;
+  }
+
+  .network {
+    display: none;
+  }
+
+  .menu {
+    /* background: green; */
+    /* width: 50%; */
+    margin: auto;
+  }
+
+}
+/* 
+@media screen and (min-width: 601px) {
+  nav .menu {
+    width: auto;
+  }
+  nav {
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    width: 602px;
+  }
+} */
+
+@media screen and (max-width: 700px) {
+  .header {
+    display: none;
+  }
 }

@@ -1,6 +1,6 @@
 .experiences {
     background: #000814;
-    /* margin: 5em 0; */
+    margin: 5em 0;
 }
 
 .xp-title {
@@ -70,6 +70,7 @@
     border-radius: 8px;
     padding: 5px;
     color: #353535;
+    width: auto;
 }
 
 .formation {
@@ -189,5 +190,27 @@ i {
         border-right: 15px solid #fff;
         border-left: 0;
         left: -14px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .xp-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .stack-list {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .stack-list p {
+        margin: 0;
+        padding: 0
+    }
+
+    .text-box h2 {
+        font-size: 1em;
     }
 }
