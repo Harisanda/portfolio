@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    color: #353535;
+    color: #d9d9d9;
 }
 
 .stack-list {
@@ -69,7 +69,7 @@
     border: solid 1px #001D3D;
     border-radius: 8px;
     padding: 5px;
-    color: #353535;
+    color: #d9d9d9;
     width: auto;
 }
 

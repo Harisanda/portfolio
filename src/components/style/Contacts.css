@@ -19,7 +19,7 @@
   /* height: 400px; */
   gap: 20px;
 }
-  
+
 .form-contact {
   background: transparent;
   width: 50%;
@@ -47,13 +47,13 @@ label {
   margin:20px auto;
   /* background: black; */
   /* width: 300px; */
-  
+
 }
-  
+
 .input-btn button {
   width: 100%;
   border: none;
-} 
+}
 
 
 .btn-submit {
@@ -66,7 +66,7 @@ label {
 .btn-submit :last-child{
   font-size: 1.3rem;
 }
-  
+
 .input-box .field {
   width: 100%;
   height: 30px;
@@ -151,7 +151,7 @@ label {
 @media screen and (max-width: 900px) {
   .contact-content{
     flex-direction: column;
-  }  
+  }
 
   .address {
     width: 90%;
@@ -168,11 +168,15 @@ label {
   }
 
   .contact-list :first-child {
-    font-size: .8rem;
+    font-size: 1.5rem;
   }
-  
+
   form {
     width: 100%;
+  }
+
+  .form-contact {
+    width: 70%;
   }
 }
 
@@ -180,9 +184,24 @@ label {
   .address h3 {
     font-size: 1.2rem;
   }
-  .address-list {
-    border: none;
+
+  .form-contact {
     width: 100%;
   }
+
+  .address-list {
+    /* border: none; */
+    width: 100%;
+  }
+
+  .contact-list p{
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .contact-list :first-child{
+    font-size: 1.2rem;
+  }
+
 }
 

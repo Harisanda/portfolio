@@ -11,6 +11,9 @@
 .projects-content {
   /* background: green; */
   margin: 0 3.4em 3em 3.4em;
+  /* padding: 0 3.4em 3rem 3.4em; */
+  /* margin: 0; */
+
   /* margin: 0 1rem 3rem; */
   /* width: 400px; */
   /* filter: blur(2px); */
@@ -60,4 +63,39 @@ button {
   /* border-radius: 10px; */
   width: 100px;
   height: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .projects-content {
+    margin: 0 1.5rem 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-content {
+    margin: 0 1rem 3rem;
+  }
+
+  .card-project {
+    height: auto; /* important */
+  }
+
+  .project-img {
+    height: 220px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects-content {
+    margin: 0 0.7rem 2rem;
+  }
+
+  .project-img {
+    height: 180px;
+  }
 }

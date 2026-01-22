@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './style/Projects.css'
 import { data } from '../utils/data';
 
 
 const Projects = () => {
+
     var settings = {
         dots: true,
         infinite: true,
@@ -16,15 +19,17 @@ const Projects = () => {
         pauseOnHover: true,
         responsive : [
             {
-                breakpoint: 750,
+                breakpoint: 1024,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
                 }
             },
             {
-                breakpoint: 1000,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 }
             },
         ]
