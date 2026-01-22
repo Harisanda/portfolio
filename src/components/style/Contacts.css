@@ -188,6 +188,17 @@ label {
   .form-contact {
     width: 100%;
   }
+  
+  .input-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-submit {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
   .address-list {
     /* border: none; */
