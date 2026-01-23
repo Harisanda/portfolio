@@ -1,12 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaLocationDot } from "react-icons/fa6";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 import { IoIosSend } from "react-icons/io";
 import './style/Contacts.css';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import Loader from 'react-js-loader';
 
 function Contacts() {
+  const form = useRef();
+  const [loading,setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+          .sendForm('service_bsvmn88','template_cswfpqw',form.current,{
+            publicKey: 'PyAAsgXQqgiskuBnx'
+          })
+          .then(
+            () => {
+              form.current.reset();
+              setTimeout(() => {
+                setLoading(false);
+              }, 2000);
+              console.log('SUCCESS')
+            },
+            (error) => {
+              setLoading(false)
+              console.log('FAILED...', error.text)
+            }
+          );
+  }
   return (
     <section className='contacts' id='contacts'>
         <h2>CONTACTEZ - MOI</h2>
@@ -24,23 +52,37 @@ function Contacts() {
                       }}
                       viewport={{once: false, amount:0.3}}
           >
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
                 <div class="input-box">
                   <label class="name" for="name">Nom</label>
-                  <input class="field" id="name" name="name"placeholder='Votre nom' required />
+                  <input class="field" id="name" name="user_name"placeholder='Votre nom' required />
                 </div>
                 <div class="input-box">
                   <label class="email" for="email">Email</label>
-                  <input class="field" id="email" name="email" placeholder='Votre email' required />
+                  <input class="field" id="email" name="user_email" placeholder='Votre email' required />
                 </div>
                 <div class="input-box">
                   <label class="message" for="message">Message</label>
                   <textarea class="field area" id="message" name="message" placeholder='Ici votre message' required></textarea>
                 </div>
+                <input type='hidden' name='time' value={new Date().toLocaleString('fr-FR')}/>
                 <div class="input-btn">
-                  <button class="btn-submit" type="submit">
-                    <p>Envoyer</p>
-                    <IoIosSend />
+                  <button class="btn-submit" type="submit" disabled={loading}>
+                    {loading ? 
+                      (
+                        <>
+                          <Loader className="loader" type="spinner-circle" size={40} bgColor="#001D3D" color="#001D3D"/>
+                          <p className='loading' >Envoi...</p>
+                        </>
+                      )
+                      :
+                      (
+                        <>
+                          <p className='sending'>Envoyer</p>
+                          <IoIosSend />
+                        </>
+                      )
+                    }
                   </button>
                 </div>
             </form>
