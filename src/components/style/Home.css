@@ -36,10 +36,12 @@
   height: 30em;
   border-radius: 50%;
   object-fit: cover;
-  border: solid,2px, #FFC300;
-  box-shadow: 0px 0px 5px 1px rgba(255,195,0,0.58);
+  aspect-ratio: 1/1;
+  border: solid,2px, #001D3D;
+  /* box-shadow: 0px 0px 5px 1px rgba(255,195,0,0.58);
   -webkit-box-shadow: 0px 0px 5px 1px rgba(255,195,0,0.58);
-  -moz-box-shadow: 0px 0px 5px 1px rgba(255,195,0,0.58);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(255,195,0,0.58); */
+  box-shadow: 0px 0px 5px 1px  rgba(95, 100, 107, 0.9);
 }
 
 .btn-down {
