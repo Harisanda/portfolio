@@ -18,7 +18,7 @@ const Skills = () => {
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
                     viewport={{once: false}}
-                    transition={{duration: 2,ease: easeIn }}
+                    transition={{duration: .5,ease: easeIn }}
                   >
                     <img src={skill.image} alt={skill.nom} />
                     <p>{skill.nom}</p>
