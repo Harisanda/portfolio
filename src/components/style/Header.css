@@ -104,6 +104,11 @@ span {
   font-size: 1.5em;
 }
 
+.mobile-menu, .mobile-burger{
+  display: none;
+}
+
+
 @media screen and (max-width: 950px){
   .logo {
     display: none;
@@ -120,22 +125,49 @@ span {
   }
 
 }
-/* 
-@media screen and (min-width: 601px) {
-  nav .menu {
-    width: auto;
-  }
-  nav {
-    margin: 0;
-    padding: 0;
-  }
-  .header {
-    width: 602px;
-  }
-} */
+
 
 @media screen and (max-width: 700px) {
-  .header {
+  
+  header {
     display: none;
+  }
+
+  .mobile-burger {
+    display: block;
+    position: fixed;
+    top: .7rem;
+    left: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    z-index: 9999;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: .1rem;
+    left: 0;
+    width: 60%;
+    height: 30vh;
+    background-color: #000B1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-menu li {
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
   }
 }
