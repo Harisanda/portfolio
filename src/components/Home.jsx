@@ -1,6 +1,6 @@
 import React from 'react'
 import { MdDownload } from "react-icons/md";
-import image1 from '../assets/images/image1.jpg';
+import image1 from '../assets/images/harisanda.png';
 import Typewriter from 'typewriter-effect'
 import { motion } from 'framer-motion';
 import './style/Home.css'
