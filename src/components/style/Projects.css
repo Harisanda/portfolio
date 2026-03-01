@@ -5,64 +5,111 @@
 
 .projects h2{
   text-align: center;
-  /* margin: 5rem; */
 }
 
 .projects-content {
-  /* background: green; */
   margin: 0 3.4em 3em 3.4em;
-  /* padding: 0 3.4em 3rem 3.4em; */
-  /* margin: 0; */
-
-  /* margin: 0 1rem 3rem; */
-  /* width: 400px; */
-  /* filter: blur(2px); */
-  /* opacity: 0.1; */
-
 }
 
 .card-project {
   background: #000814;
-  /* border-radius: 20px; */
   width: 100%;
-  height: auto;;
+  height: auto;
+  min-height: 700px;
+  border: 1px solid #001d3d;
+  box-shadow: 0px 0px 5px 1px  rgba(95, 100, 107, 0.9);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .project-img {
-  /* background: orangered; */
   height: 300px;
-  
 }
 
 .project-img img{
   width: 100%;
-  /* border-radius: 20px 20px 0 0; */
   height: 100%;
 }
 
 .description {
   color: #fff;
-  /* background: red; */
   padding: 0 10px;
 }
 
 .description h3{
   font-weight: 700;
+  font-size: 1rem;
+}
+
+.techno-title {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-left: 10px;
+  margin-top: auto;
+}
+
+.technos-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
+  gap: 10px;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.technos {
+  border: 1px solid #001d3d;
+  background: #001D3D;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  height: 30px;
+  padding: 10px;
+  justify-self: start;
+}
+
+.technos img {
+  width: 25px;
+  height: 25px;
 }
 
 .btn {
-  padding: 0 10px;
+  padding: 0 10px 16px 10px;
+  margin-top: auto;
 }
 
 .btn button {
   color: #001D3D;
-  font-size: .9em;
   font-weight: 700;
   background: #FFC300;
   border: none;
-  /* border-radius: 10px; */
-  width: 100px;
-  height: 30px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: auto;
+  margin-top: 16px;
+}
+
+.btn button > svg {
+  font-size: 1.8rem;
+}
+
+.btn button > p {
+  font-size: 1.2rem;
+}
+
+.btn button:hover {
+  background: #FFB000;
+  transform: scale(0.98);
+  color: #000814;
 }
 
 @media screen and (max-width: 1024px) {
@@ -77,8 +124,7 @@
   }
 
   .card-project {
-    height: auto; /* important */
-    /* width: 90%; */
+    height: auto; 
     padding: 0 20px;
   }
 
@@ -99,5 +145,9 @@
 
   .project-img {
     height: 180px;
+  }
+
+  .card-project {
+    height: 800px;
   }
 }

@@ -5,11 +5,15 @@ import { data } from '../utils/data';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
-
+import { Autoplay } from "swiper/modules";
+import { FaGithub } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Projects = () => {
+    const handleClick = (link) => {
+        window.open(link, "_blank", "noopener,noreferrer")
+    }
 
   return (
     <section className='projects' id='projects'>
@@ -31,7 +35,10 @@ const Projects = () => {
                     1024: { slidesPerView: 3 },
                 }}
             >
-                {data.map((item, index) => (
+                {data.map((item, index) => {
+                    const technos = item.stacks;
+                    console.log(technos);
+                    return (
                         <SwiperSlide key={index}>
                             <div className="card-project">
                                 <div className="project-img">
@@ -40,15 +47,45 @@ const Projects = () => {
 
                                 <div className="description">
                                     <h3>{item.titre}</h3>
-                                    <p>{item.description.slice(0, 130)}...</p>
+                                    <p>{item.description}</p>
+                                </div>
+
+                                <p className='techno-title'>Technologies:</p>
+                                <div className='technos-group'>
+                                    {technos.map((stack,index) => {
+                                        console.log(stack);
+                                        return (
+                                            <div key={index} className='technos'>
+                                                <img src={stack.logo} alt={stack.name} />
+                                                <p>{stack.name}</p>
+                                            </div>
+                                        )
+                                    })}
                                 </div>
 
                                 <div className="btn">
-                                    <button>Voir plus</button>
+                                    <button onClick={() => handleClick(item.link)}>
+                                        <FaGithub/>
+                                        <p>Github</p>
+                                        <motion.div
+                                            animate={{
+                                                x: [0, 8, 0],
+                                                opacity: [1, 0.3, 1],
+                                            }}
+                                            transition={{
+                                                duration: 1.2,
+                                                repeat: Infinity,
+                                                ease: "easeInOut",
+                                            }}
+                                            style={{fontSize: "1.2rem"}}
+                                        >
+                                            <FaLongArrowAltRight />
+                                        </motion.div>
+                                    </button>
                                 </div>
                             </div>
                         </SwiperSlide>
-                    ))
+                    )})
                 }
             </Swiper>
         </div>
