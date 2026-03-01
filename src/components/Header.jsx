@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaGithubSquare } from "react-icons/fa";
-import logo from '../assets/images/Frame.svg'
+import logo from '../assets/images/logo.svg'
 import './style/Header.css';
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
@@ -20,7 +20,7 @@ const Header = () => {
     <>
       <header className='header'>
         <nav>
-          <div className='logo'>
+          <div className='logo' onClick={() => scrollTo("home")}>
             <img src={logo} alt="logo" />
           </div>
           <div className="menu">

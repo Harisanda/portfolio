@@ -92,11 +92,12 @@ nav .menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer
 }
 
 .logo img{
-  width: 100px;
-  height: 60px;
+  width: 200px;
+  height: 70px;
 }
 
 span {
